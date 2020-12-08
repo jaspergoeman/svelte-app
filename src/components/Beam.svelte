@@ -8,12 +8,21 @@
     export let selectedTopic;
     export let selectedSubgroup;
 
+    let showInput = false;
+
     function selectTopic(topic) {
         selectedTopic = topic;
+        showInput = false;
     }
 
     function selectSubgroup(subgroup) {
         selectedSubgroup = subgroup;
+        showInput = false;
+    }
+
+    function setShowInput(){
+        showInput = true;
+        console.log(showInput);
     }
     
 </script>
@@ -49,16 +58,16 @@
         display: flex;
     }
     .beam__input {
-        display: none;
+        display: flex;
         background: transparent;
         color: white;
         border: none;
         border-bottom: 3px solid #1ebfc8;
         color: white;
-    }
-
-    .beam__input--show {
-        display: flex;
+        margin: 0;
+        padding: 0;
+        margin-top: -.6rem;
+        margin-right: .6rem;
     }
 
     .beam__input:focus {
@@ -77,14 +86,16 @@
                 <li id={subgroup} ><a class="{selectedSubgroup === subgroup ? 'beam__isSelected' : ''}" on:click={() => selectSubgroup(subgroup)}>{subgroup}</a> </li>
                 {/each}
                 <div class="beam__div-item">
+                    {#if showInput}
                     <input
-                    class="beam__input"
+                        class="beam__input"
                         type="text"
                         placeholder="zoekterm" />
+                    {/if}
                     <div class="clickable beam__search">
                         <Icon
                             icon={faSearch}
-                            onMouseEnter={() => this.showInput()} />
+                            on:mouseenter={() => setShowInput()} />
                     </div>
                 </div>
             </ul>
