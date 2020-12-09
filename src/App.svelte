@@ -9,6 +9,14 @@
 </script>
 
 <style>
+	@font-face {
+  font-family: 'Arboria-Book';
+  src: local('Arboria'), url(./fonts/Arboria-Medium.otf) format('truetype');
+}
+:global(body){
+	font-family: 'Arboria', sans-serif;
+  font-weight: 500;
+}
 	:global(h1) {
 		color: #1e64c8;
 		text-transform: uppercase;
@@ -76,7 +84,7 @@
 			max-width: 720px;
 		}
 		:global(.App-section) {
-			padding: 60px 0;
+			padding: 30px 0;
 		}
 	}
 
