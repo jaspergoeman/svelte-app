@@ -98,10 +98,9 @@
     <section class="App-section">
         <div class="App-container App-container--xl">
             <div class="header__section">
-                <div claa="header__section--left">
-                    
+                <div class="header__section--left">
+                    <Logo_uz />
                         <Logo_u_gent />
-                        <Logo_uz />
                 </div>
                 <div class="header__section--mid">
                     <h1>Antibioticagids</h1>
