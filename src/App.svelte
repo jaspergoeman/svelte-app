@@ -1,8 +1,12 @@
 <script>
 	import Beam from "./components/Beam.svelte";
 	import Header from "./components/Header.svelte";
+	import Aandoeninggroepen from "./components/Aandoeninggroepen.svelte";
 	export let topics;
 	export let subgroups;
+	export let aandoeningen;
+	export let aandoeninggroepen;
+	export let  antibioticas;
 	let selectedTopic = "";
 	let selectedSubgroup = "";
 	let selectedDoelgroep = "";
@@ -102,10 +106,8 @@
 </style>
 
 <Header bind:selectedDoelgroep={selectedDoelgroep}/>
-<main>
-	
+<main>	
 <Beam {topics} {subgroups} bind:selectedTopic={selectedTopic} bind:selectedSubgroup={selectedSubgroup}/>
-<h1>{selectedTopic}</h1>
-<h1>{selectedSubgroup}</h1>
-<h1>{selectedDoelgroep}</h1>
+<Aandoeninggroepen {selectedDoelgroep} {selectedSubgroup} {selectedTopic} {antibioticas} {aandoeninggroepen} {aandoeningen}/>
+
 </main>

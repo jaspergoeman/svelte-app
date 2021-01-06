@@ -4,19 +4,10 @@
 
     export let selectedDoelgroep;
 
-    let volwassenenIsClicked = false;
-    let kinderenIsClicked = false;
-
     function setDoelgroep(doelgroep){
-        if( doelgroep === "kinderen"){
-            volwassenenIsClicked = false;
-            kinderenIsClicked = true;
-        };
-        if( doelgroep === "volwassenen"){
-            volwassenenIsClicked = true;
-            kinderenIsClicked = false;
-        };
+        
         selectedDoelgroep = doelgroep;
+        console.log(selectedDoelgroep);
     };
 </script>
 
@@ -105,7 +96,7 @@
                 <div class="header__section--mid">
                     <h1>Antibioticagids</h1>
                     <ul>
-                        <li id="kinderen" class="{kinderenIsClicked === true ? 'App-is-selected' : ''}">
+                        <li id="kinderen" class="{selectedDoelgroep === 'kinderen' ? 'App-is-selected' : ''}">
                             <div
                                 class="clickable"
                                 on:click={() => setDoelgroep('kinderen')}>
@@ -113,7 +104,7 @@
                             </div>
                         </li>
                         
-                        <li id="volwassenen" class="{volwassenenIsClicked === true ? 'App-is-selected' : ''}">
+                        <li id="volwassenen" class="{selectedDoelgroep === 'volwassenen' ? 'App-is-selected' : ''}">
                             <div
                                 class="clickable"
                                 on:click={() => setDoelgroep('volwassenen')}>

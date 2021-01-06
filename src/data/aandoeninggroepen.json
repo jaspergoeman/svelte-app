@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Arthiritis",
+        "aandoeningen": [
+            "Arthiritis"
+        ],
+        "subgroups": [
+            "EMPIRISCHE THERAPIE"
+        ],
+        "topics": [
+            "ABDOMINAAL"
+        ],
+        "doelgroep": "volwassenen"
+    },
+    {
+        "name": "Peritonitis",
+        "aandoeningen": [
+            "secundaire peritonitis",
+            "spontane bacteriële peronitis"
+        ],
+        "subgroups": [
+            "empirische therapie"
+        ],
+        "topics": [
+            "Abdominaal"
+        ],
+        "doelgroep": "volwassenen"
+    },
+    {
+        "name": "Peritonitis kinderen",
+        "aandoeningen": [
+            "secundaire peritonitis",
+            "spontane bacteriële peronitis"
+        ],
+        "subgroups": [
+            "EMPIRISCHE THERAPIE"
+        ],
+        "topics": [
+            "ABDOMINAAL"
+        ],
+        "doelgroep": "kinderen"
+    }
+]

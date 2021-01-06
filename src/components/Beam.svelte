@@ -1,5 +1,6 @@
 <script>
     
+    
     import Icon from "fa-svelte";
     import { faSearch } from "@fortawesome/free-solid-svg-icons/faSearch";
     export let subgroups;
@@ -22,7 +23,6 @@
 
     function setShowInput(){
         showInput = true;
-        console.log(showInput);
     }
     
 </script>
@@ -83,7 +83,7 @@
         <div class="beam">
             <ul>
                 {#each subgroups as subgroup}
-                <li id={subgroup} ><a class="{selectedSubgroup === subgroup ? 'beam__isSelected' : ''}" on:click={() => selectSubgroup(subgroup)}>{subgroup}</a> </li>
+                <li id={subgroup.name} ><a class="{selectedSubgroup === subgroup.name ? 'beam__isSelected' : ''}" on:click={() => selectSubgroup(subgroup.name)}>{subgroup.name}</a> </li>
                 {/each}
                 <div class="beam__div-item">
                     {#if showInput}
@@ -107,7 +107,7 @@
         <div class="beam">
             <ul>
                 {#each topics as topic}
-                <li id={topic}><a class="{selectedTopic === topic ? 'beam__isSelected' : ''}" on:click={() => selectTopic(topic)}>{topic}</a> </li>
+                <li id={topic.name}><a class="{selectedTopic === topic.name ? 'beam__isSelected' : ''}" on:click={() => selectTopic(topic.name)}>{topic.name}</a> </li>
                 {/each}
             </ul>
         </div>
